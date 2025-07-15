@@ -144,12 +144,10 @@ Padding _buildCommentCardSheet(
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(12, 38),
-                        primary: AppColors.backgroundColor,
+                        backgroundColor: AppColors.backgroundColor, // ✅ FIXED
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            10,
-                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       onPressed: () {},
@@ -167,6 +165,7 @@ Padding _buildCommentCardSheet(
                         ],
                       ),
                     ),
+
                     const Spacer(),
                     Text(
                       time,

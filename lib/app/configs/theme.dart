@@ -27,11 +27,21 @@ class AppTheme {
 
   static final ThemeData lightTheme = ThemeData(
     primaryColor: AppColors.primaryColor,
-    backgroundColor: AppColors.whiteColor,
     scaffoldBackgroundColor: AppColors.whiteColor,
+
+    // ✅ Updated: removed deprecated `backgroundColor`, used `scaffoldBackgroundColor`
+
     navigationBarTheme: const NavigationBarThemeData(
-      // indicatorColor: AppColors.backgroundColor,
       indicatorColor: AppColors.whiteColor,
+    ),
+
+    // ✅ Optional: Global button theme fix
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColors.primaryColor,
+        foregroundColor: Colors.white,
+        textStyle: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+      ),
     ),
   );
 }

@@ -181,7 +181,7 @@ class ProfilePage extends StatelessWidget {
         ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            primary: AppColors.greenColor,
+            backgroundColor: AppColors.greenColor, // ✅ FIXED
             minimumSize: const Size(120, 45),
             elevation: 8,
             shadowColor: AppColors.primaryColor.withOpacity(0.3),
@@ -189,9 +189,12 @@ class ProfilePage extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
           ),
-          child: Text('Follow',
-              style: AppTheme.whiteTextStyle
-                  .copyWith(fontWeight: AppTheme.semiBold)),
+          child: Text(
+            'Follow',
+            style: AppTheme.whiteTextStyle.copyWith(
+              fontWeight: AppTheme.semiBold,
+            ),
+          ),
         ),
         const SizedBox(width: 12),
         Container(
@@ -209,6 +212,7 @@ class ProfilePage extends StatelessWidget {
       ],
     );
   }
+
 
   Row _buildDescription() {
     return Row(
